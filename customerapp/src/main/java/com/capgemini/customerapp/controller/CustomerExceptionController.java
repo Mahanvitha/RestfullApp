@@ -16,19 +16,13 @@ import com.capgemini.customerapp.service.exception.CustomerNotFoundException;
 @ControllerAdvice
 @RestController
 public class CustomerExceptionController {
-	
-	
 
-		
-		
-		@ExceptionHandler(value = CustomerNotFoundException.class)
-		public  ResponseEntity<ErrorMessage> customerNotFoundException(
-				CustomerNotFoundException customerNotFoundException, HttpServletRequest request) {
-			ErrorMessage errorMessage = new ErrorMessage(request.getRequestURI(), customerNotFoundException.getMessage(),
-					LocalDateTime.now(), HttpStatus.NOT_FOUND);
-			return new ResponseEntity<>(errorMessage, HttpStatus.NOT_FOUND);
-		}
-
-		
+	@ExceptionHandler(value = CustomerNotFoundException.class)
+	public ResponseEntity<ErrorMessage> customerNotFoundException(CustomerNotFoundException customerNotFoundException,
+			HttpServletRequest request) {
+		ErrorMessage errorMessage = new ErrorMessage(request.getRequestURI(), customerNotFoundException.getMessage(),
+				LocalDateTime.now(), HttpStatus.NOT_FOUND);
+		return new ResponseEntity<>(errorMessage, HttpStatus.NOT_FOUND);
 	}
 
+}

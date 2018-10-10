@@ -49,5 +49,10 @@ public class ErrorMessage {
 	public ErrorMessage(String requestURI, String message, LocalDateTime now, HttpStatus notFound) {
 		// TODO Auto-generated constructor stub
 	}
+	@Override
+	public String toString() {
+		return "ErrorMessage [url=" + url + ", errorMessage=" + errorMessage + ", status=" + status + ", time=" + time
+				+ "]";
+	}
 
 }

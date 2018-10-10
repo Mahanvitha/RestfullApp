@@ -1,4 +1,4 @@
-package com.capgemini.customerapp.entity;
+package com.capgemini.onlineorderapp.entity;
 
 public class Address {
 	private String street;

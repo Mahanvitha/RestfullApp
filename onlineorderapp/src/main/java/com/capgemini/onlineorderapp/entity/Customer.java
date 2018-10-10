@@ -1,5 +1,4 @@
-package com.capgemini.customerapp.entity;
-
+package com.capgemini.onlineorderapp.entity;
 import org.apache.tomcat.jni.Address;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

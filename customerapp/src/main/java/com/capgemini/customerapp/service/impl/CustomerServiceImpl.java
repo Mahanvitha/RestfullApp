@@ -58,4 +58,10 @@ public class CustomerServiceImpl  implements CustomerService{
 		return customerRepository.findAll();
 
 	}
+
+	@Override
+	public Customer findCustomerById(int customerId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

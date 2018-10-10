@@ -12,6 +12,7 @@ public interface CustomerService {
 	public Customer getCustomer(int customerId) throws CustomerNotFoundException;
 	public void deleteCustomer(Customer customer);
 	public List<Customer> getAllCustomers();
+	public Customer findCustomerById(int customerId);
 	 
 
 }
